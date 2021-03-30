@@ -7,12 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Ingredient.destroy_all
+Cocktail.destroy_all
+
+
 
 Ingredient.create!(name: "lemon")
 Ingredient.create!(name: "ice")
 Ingredient.create!(name: "mint leaves")
 
-Cocktail.destroy_all
 
 Cocktail.create!(name: 'mojito')
 Cocktail.create!(name: 'Mint Julep ')

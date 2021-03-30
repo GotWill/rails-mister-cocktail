@@ -1,13 +1,10 @@
 <div class="text-center mt-4">
 <h1>Nosso Drinks</h1>
-<%= link_to "Crie seu próprio cocktail", new_cocktail_path %>
+<%= link_to "Crie seu próprio cocktail",  new_cocktail_path , class: "btn btn-primary" %>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li>
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </li>
-  <% end %>
-</ul>
-</div>
+
+
+<%= @cocktails.each do |cocktail| %>
+    <p> <%= link_to cocktail.name, cocktail_path(cocktail) %> </p>  
+<% end %>
 
