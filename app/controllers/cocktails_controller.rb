@@ -1,4 +1,5 @@
 class CocktailsController < ApplicationController
+  before_action :find, only: %i[show destroy ]
   def index
     # listagem de todos os cocktails
     @cocktails = Cocktail.all
@@ -21,14 +22,14 @@ class CocktailsController < ApplicationController
 
   def show
     # detalhes de UM cocktail
-    @Cocktail = Cocktail.find(params[:id])
 
   end
-
+  
   def destroy 
-    find
+ 
     @cocktail.destroy
     redirect_to cocktails_path
+    
   end
 
   
@@ -38,4 +39,8 @@ class CocktailsController < ApplicationController
     params.require(:cocktail).permit(:name, :photo)
   end
 
+  def find
+   @cocktail = Cocktail.find(params[:id])
+
+  end
 end

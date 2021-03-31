@@ -18,6 +18,3 @@ Ingredient.create!(name: "mint leaves")
 
 Cocktail.create!(name: 'mojito')
 Cocktail.create!(name: 'Mint Julep ')
-Cocktail.create!(name: 'Sex on the Beach')
-Cocktail.create!(name: 'Whiskey Sour')
-Cocktail.create!(name: 'pina colada')
