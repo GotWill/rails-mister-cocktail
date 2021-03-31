@@ -4,9 +4,9 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
-  def show
-    # detalhes de UM cocktail
-    @cocktail = Cocktail.find(params[:id])
+  def new
+    # pagina de formulario para criar um novo cocktail
+    @cocktail = Cocktail.new
   end
 
   def create
@@ -19,14 +19,23 @@ class CocktailsController < ApplicationController
     end
   end
 
-  def new
-    # pagina de formulario para criar um novo cocktail
-    @cocktail = Cocktail.new
+  def show
+    # detalhes de UM cocktail
+    @Cocktail = Cocktail.find(params[:id])
+
   end
 
+  def destroy 
+    find
+    @cocktail.destroy
+    redirect_to cocktails_path
+  end
+
+  
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :photos )
+    params.require(:cocktail).permit(:name, :photo)
   end
+
 end
