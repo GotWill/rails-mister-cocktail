@@ -1,15 +1,33 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <h1>Mister Cocktail</h1>
+ <h1> Mister Cocktail </h1> 
   <%= link_to "Create new cocktail", new_cocktail_path, class: "btn btn-primary"  %>
 </div>
 
 
-<div class="text-center">
+<div class="container mt-5">
     <%= @cocktails.each do |cocktail| %>
-        <p> <%= link_to cocktail.name, cocktail_path(cocktail) %> 
-            <%= link_to 'deletar', cocktail_path(cocktail), method: :delete, data: { confirm: "Delete Cocktail?" }  %>
-        </p>  
-    <% end %>
-    
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top " src="..." alt="Card image cap">
+            <div class="card-body">
+                <h2 class="card-title"> <%= cocktail.name %></h2>
+            </div>
+            <%= link_to "Info",  cocktail_path(cocktail), class: "btn btn-primary w-50" %>
+            </div>
+    <% end %> 
 <div>
+
+ 
+<div class="footer">
+    <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
+
 

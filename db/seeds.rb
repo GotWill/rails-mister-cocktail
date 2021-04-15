@@ -17,4 +17,4 @@ Ingredient.create!(name: "mint leaves")
 
 
 Cocktail.create!(name: 'mojito')
-Cocktail.create!(name: 'Mint Julep ')
+Cocktail.create!(name: 'Mint Julep')
